@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');
+
+:root {
+  --primary-color: #C71585; /* Vibrant magenta */
+  --secondary-color: #FF1493; /* Deep pink */
+  --background-color: #2C0A0E; /* Dark maroonish background */
+  --header-bg: linear-gradient(135deg, #800020, #8B008B); /* Gradient from dark maroon to dark magenta */
+  --message-sent-bg: #C71585;
+  --message-received-bg: #e1e8ed;
+  --text-color: #fff;
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--background-color);
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.app-header {
+  background: var(--header-bg);
+  padding: 20px;
+  color: #fff;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* Header with logo and title */
+.header-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-logo img {
+  height: 40px;
+  margin-right: 10px;
+}
+
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  margin: 20px auto;
+  width: 90%;
+  max-width: 800px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.message-list {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.message {
+  margin-bottom: 15px;
+  padding: 10px 15px;
+  border-radius: 20px;
+  max-width: 70%;
+  position: relative;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.message .sender {
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.message .time {
+  font-size: 12px;
+  color: #999;
+  position: absolute;
+  bottom: -18px;
+  right: 10px;
+}
+
+.message.sent {
+  margin-left: auto;
+  background-color: var(--message-sent-bg);
+  color: #fff;
+  text-align: right;
+}
+
+.message.received {
+  margin-right: auto;
+  background-color: var(--message-received-bg);
+  color: var(--text-color);
+}
+
+.input-container {
+  display: flex;
+  padding: 15px;
+  border-top: 1px solid #ddd;
+  background-color: #fafafa;
+}
+
+.input-container input {
+  flex: 1;
+  padding: 12px 20px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 25px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.input-container input:focus {
+  border-color: var(--primary-color);
+}
+
+.input-container button {
+  margin-left: 10px;
+  padding: 12px 20px;
+  font-size: 16px;
+  background: var(--primary-color);
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.input-container button:hover {
+  background-color: #a50c6e;
+}
+
+.login-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  background: var(--primary-color);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.login-btn:hover {
+  background-color: #a50c6e;
+}
+
